@@ -7,7 +7,7 @@
 		"server": "nodemon index.js",
 		"start": "node index.js",
 		"build:ui": "rm -rf frontend/dist && rm -rf dist && cd frontend && npm run build && cp -r dist ../",
-		"deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push"
+		"deploy:full": "npm run build:ui && git add . ':(exclude)frontend' && git commit -m 'uibuild' && git push"
 	},
 	"author": "kashyap",
 	"license": "ISC",
